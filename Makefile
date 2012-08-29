@@ -25,7 +25,7 @@ clean:
 
 count:
 	@echo "Core:"
-	@cat picoc.h interpreter.h picoc.c table.c lex.c parse.c expression.c platform.c heap.c type.c variable.c include.c | grep -v '^[ 	]*/\*' | grep -v '^[ 	]*$$' | wc
+	@cat src/picoc.h interpreter.h picoc.c table.c lex.c parse.c expression.c platform.c heap.c type.c variable.c include.c | grep -v '^[ 	]*/\*' | grep -v '^[ 	]*$$' | wc
 	@echo ""
 	@echo "Everything:"
 	@cat $(SRCS) *.h */*.h | wc
@@ -40,17 +40,17 @@ src/expression.o: src/expression.c src/interpreter.h src/platform.h
 src/heap.o: src/heap.c src/interpreter.h src/platform.h
 src/type.o: src/type.c src/interpreter.h src/platform.h
 src/variable.o: src/variable.c src/interpreter.h src/platform.h
-src/clibrary.o: src/clibrary.c src/picoc.h src/interpreter.h platform.h
-src/platform.o: src/platform.c src/picoc.h src/interpreter.h platform.h
-src/include.o: src/include.c src/picoc.h src/interpreter.h platform.h
-platform/platform_unix.o: platform/platform_unix.c picoc.h interpreter.h platform.h
-platform/library_unix.o: platform/library_unix.c interpreter.h platform.h
-cstdlib/stdio.o: cstdlib/stdio.c interpreter.h platform.h
-cstdlib/math.o: cstdlib/math.c interpreter.h platform.h
-cstdlib/string.o: cstdlib/string.c interpreter.h platform.h
-cstdlib/stdlib.o: cstdlib/stdlib.c interpreter.h platform.h
-cstdlib/time.o: cstdlib/time.c interpreter.h platform.h
-cstdlib/errno.o: cstdlib/errno.c interpreter.h platform.h
-cstdlib/ctype.o: cstdlib/ctype.c interpreter.h platform.h
-cstdlib/stdbool.o: cstdlib/stdbool.c interpreter.h platform.h
-cstdlib/unistd.o: cstdlib/unistd.c interpreter.h platform.h
+src/clibrary.o: src/clibrary.c src/picoc.h src/interpreter.h src/platform.h
+src/platform.o: src/platform.c src/picoc.h src/interpreter.h src/platform.h
+src/include.o: src/include.c src/picoc.h src/interpreter.h src/platform.h
+platform/platform_unix.o: platform/platform_unix.c src/picoc.h src/interpreter.h src/platform.h
+platform/library_unix.o: platform/library_unix.c src/interpreter.h src/platform.h
+cstdlib/stdio.o: cstdlib/stdio.c src/interpreter.h src/platform.h
+cstdlib/math.o: cstdlib/math.c src/interpreter.h src/platform.h
+cstdlib/string.o: cstdlib/string.c src/interpreter.h src/platform.h
+cstdlib/stdlib.o: cstdlib/stdlib.c src/interpreter.h src/platform.h
+cstdlib/time.o: cstdlib/time.c src/interpreter.h src/platform.h
+cstdlib/errno.o: cstdlib/errno.c src/interpreter.h src/platform.h
+cstdlib/ctype.o: cstdlib/ctype.c src/interpreter.h src/platform.h
+cstdlib/stdbool.o: cstdlib/stdbool.c src/interpreter.h src/platform.h
+cstdlib/unistd.o: cstdlib/unistd.c src/interpreter.h src/platform.h

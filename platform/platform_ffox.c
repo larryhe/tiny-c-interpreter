@@ -1,4 +1,4 @@
-#include "../interpreter.h"
+#include "../src/interpreter.h"
 
 /* deallocate any storage */
 void PlatformCleanup()

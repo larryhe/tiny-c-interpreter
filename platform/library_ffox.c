@@ -1,4 +1,4 @@
-#include "../interpreter.h"
+#include "../src/interpreter.h"
 
 /* list of all library functions and their prototypes */
 struct LibraryFunction PlatformLibrary[] =

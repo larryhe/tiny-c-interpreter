@@ -1,5 +1,5 @@
-#include "../interpreter.h"
-#include "../picoc.h"
+#include "../src/interpreter.h"
+#include "../src/picoc.h"
 
 /* mark where to end the program for platforms which require this */
 int PicocExitBuf[41];

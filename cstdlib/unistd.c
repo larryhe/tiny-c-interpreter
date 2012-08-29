@@ -2,7 +2,7 @@
 #include <stdio.h>
 #include <unistd.h>
 #include <limits.h>
-#include "../interpreter.h"
+#include "../src/interpreter.h"
 
 #ifndef BUILTIN_MINI_STDLIB
 

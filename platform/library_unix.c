@@ -1,4 +1,4 @@
-#include "../interpreter.h"
+#include "../src/interpreter.h"
 
 void UnixSetupFunc()
 {    
